@@ -1,0 +1,66 @@
+:root {
+    /* active input border */
+    --linearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    /* input errors */
+    --red: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.wrapper {
+    background: url(./images/bg-main-desktop.png) repeat-y;
+    background-size: 40% auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg-card-front {
+    background: url('./images/bg-card-front.png') no-repeat;
+    height: 25vh;
+    transform: translate(20%, 65%);
+}
+
+.bg-card-back {
+    background: url('./images/bg-card-back.png') no-repeat;
+    height: 25vh;
+    transform: translate(25%, 65%);
+}
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .bg-card-front {
+        transform: translate(18%, 65%);
+    }
+
+    .bg-card-back {
+        transform: translate(28%, 75%);
+    }
+}
+
+
+
+
+
+.attribution {
+    color: var(--veryDarkViolet);
+    text-align: center;
+}
