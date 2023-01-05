@@ -1,8 +1,12 @@
 const fetchBtn = document.querySelector(".btn");
 const imagesContainer = document.querySelector(".images-container");
 
+let pages = 1;
+
 function fetchingImages() {
-	fetch("https://picsum.photos/v2/list?limit=9")
+	console.log("hello");
+	pages++;
+	fetch(`https://picsum.photos/v2/list?page=${pages}&limit=9`)
 		.then((res) => res.json())
 		.then((dataImages) => {
 			dataImages.forEach((image) => {
@@ -17,5 +21,11 @@ function fetchingImages() {
 			fetchBtn.style.display = "none";
 		});
 }
+
+document.addEventListener("scroll", () => {
+	if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+		fetchingImages();
+	}
+});
 
 fetchBtn.addEventListener("click", fetchingImages);
