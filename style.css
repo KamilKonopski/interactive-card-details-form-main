@@ -37,9 +37,11 @@ body {
 
 .image-container {
     flex-basis: 30%;
+    height: 35vh;
     margin: 10px;
 }
 
 .image-container img {
+    height: 100%;
     width: 100%;
 }
