@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #151e33;
+  --color-main-bg: #213051;
+  --color-button: #b32f7e;
+  --color-border: #615624;
+  --color-text: #fdfdfd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,15 @@
+.container {
+    border-radius: 20px;
+    max-width: 1440px;
+    margin: 30px auto;
+    background-color: var(--color-main-bg);
+    padding: 20px 40px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    color: var(--color-text);
+    padding: 20px 0;
+    text-transform: uppercase;
+}
