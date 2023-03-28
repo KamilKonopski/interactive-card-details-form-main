@@ -21,7 +21,7 @@ const ProductsChart: React.FC<IProps> = ({ products }) => {
 		const calculateDiscountedPrice = () => {
 			const result = (product.price * product.discountPercentage) / 100;
 			const discountedPriceOfOneProduct = product.price - result;
-			return discountedPriceOfOneProduct;
+			return +discountedPriceOfOneProduct.toFixed(2);
 		};
 		product.discountedPriceOfOneProduct = calculateDiscountedPrice();
 	});
