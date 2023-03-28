@@ -16,6 +16,7 @@ export interface IProduct {
 	quantity: number;
 	title: string;
 	total: number;
+	discountedPriceOfOneProduct: number;
 }
 
 export interface IAddProduct {
