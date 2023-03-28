@@ -17,6 +17,16 @@ interface IProps {
 }
 
 const ProductsChart: React.FC<IProps> = ({ products }) => {
+	products.forEach((product) => {
+		const calculateDiscountedPrice = () => {
+			const result = (product.price * product.discountPercentage) / 100;
+			const discountedPriceOfOneProduct = product.price - result;
+			return discountedPriceOfOneProduct;
+		};
+		product.discountedPriceOfOneProduct = calculateDiscountedPrice();
+	});
+	console.log(products);
+
 	return (
 		<div>
 			<ResponsiveContainer width="100%" height={250}>
@@ -44,7 +54,7 @@ const ProductsChart: React.FC<IProps> = ({ products }) => {
 					/>
 					<Line
 						type="linear"
-						dataKey="discountedPrice"
+						dataKey="discountedPriceOfOneProduct"
 						stroke="#7ca5a8"
 						strokeWidth={2}
 					/>
